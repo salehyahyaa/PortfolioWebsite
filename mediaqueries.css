@@ -1,12 +1,132 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
+/* ======= TABLET AND MOBILE VIEW (max-width: 1024px) ======= */
+@media screen and (max-width: 1024px) {
+  section {
+    margin: 0 4rem;
+    height: auto;
   }
 
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .education__pic-container,
+  .education-details-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .education-containers {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .skills-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-content {
+    text-align: left;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .article-container {
+    justify-content: center;
+  }
+
+  article {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
+/* ======= MOBILE VIEW (max-width: 600px) ======= */
+@media screen and (max-width: 600px) {
+  section {
+    margin: 0 1rem;
+    height: auto;
+  }
 
+  .section__pic-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .section_text_p2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .grad-year {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .skills-sub-title {
+    font-size: 1.3rem;
+  }
+
+  .experience-content h3 {
+    font-size: 1rem;
+  }
+
+  .experience-date,
+  .experience-points {
+    font-size: 0.85rem;
+  }
+
+  .menu-links {
+    width: 100vw;
+    text-align: center;
+    right: 0;
+    left: 0;
+  }
+}

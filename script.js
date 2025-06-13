@@ -4,3 +4,8 @@ function toggleMenu() {
   menu.classList.toggle("open"); /*so we can add or remove this class (open)*/ 
   icon.classList.toggle("open"); /*so we can add or remove this class (open)*/ 
 }
+
+
+
+
+
