@@ -130,3 +130,30 @@
     left: 0;
   }
 }
+
+
+
+
+
+/*Mobile fixing*/
+@media (max-width: 768px) {
+  .section__pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .round_pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+    /*center-align the text section */
+  .section__text {
+    text-align: center;
+    padding: 1rem;
+  }
+}
