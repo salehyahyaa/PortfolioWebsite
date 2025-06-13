@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel = "stylesheet" href="style.css" />
+    <link rel = "stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id = "desktop-nav">
+      <div class = "logo">Saleh Yahya</div>
+      <div>
+        <ul class = "nav-links">
+          <li><a href = "#experience">Experience</a></li>
+          <li><a href = "#projects">Projects</a></li>
+          <li><a href = "#skills">Skills</a></li>
+          <li><a href = "#education">Education</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class = "logo">Saleh Yahya</div>
+      <div class = "hamburger-menu">
+        <div class = "hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class = "menu-links">
+          <li><a href = "#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href = "#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href = "#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href = "#education" onclick="toggleMenu()">Education</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id = "profile">
+      <div class = "section__pic-container round_pic"> <!-- round_pic class only for hero -->
+        <img src = "./images/header.jpg" alt = "Header picture"/>
+      </div>
+
+      <div class = "section_text">
+        <p class = "section_text_p1">Hello, I'm</p>
+        <h1 class = "title">Saleh Yahya</h1>
+        <p class = "section_text_p2">Aspiring Software Engineer</p>
+        
+        <div class = "btn-container">
+          <button class = "btn btn-color-2" 
+            onclick = "window.open('./images/resume.pdf')"> 
+            Download CV
+          </button>
+          <button class = "btn btn-color-1" 
+            onclick="location.href='#about'"> <!--ABOUT ME BUTTON-->
+            About Me
+          </button>
+        </div>
+
+        <div id = "socials-container">
+          <img 
+            src = "./images/email.png" 
+            alt="Email"
+            class= "icon" 
+            onclick= "location.href ='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCKCFTNfmhHTCKfgrnLWrxWWrsWVhZFqXWcmFGMsBSsBBgWfQpHFfBlXvFfJMNPtrKzdDKcL'"
+          />
+          <img 
+            src = "./images/linkedin.png" 
+            alt="Linkedin profile"
+            class= "icon" 
+            onclick= "location.href ='https://www.linkedin.com/in/salehyahya1/'"
+          />
+          <img 
+            src = "./images/github.png" 
+            alt="Github profile"
+            class= "icon" 
+            onclick= "location.href ='https://github.com/salehyahyaa'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id = "education">
+      <p class = "section_text_p1">Say something here for expnce</p>
+      <h1 class = "title">Education</h1>
+
+      <div class="section-container">
+
+        <!-- Use custom container so it doesn't inherit hero image style -->
+        <div class="education__pic-container">
+          <img src="./images/lewis-u.jpg" 
+            alt="Lewis University Logo" 
+            class="education-pic"
+          />
+        </div>
+
+        <div class="education-details-container">
+          <div class="education-containers">
+            <div class="details-container">
+              <img
+                src="./images/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Undergraduate</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./images/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Graduate</h3>
+              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <!--Connecting JS FILE-->
+    <script src = "script.js"></script>
+  </body>
+</html>
