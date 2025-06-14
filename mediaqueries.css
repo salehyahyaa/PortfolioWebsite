@@ -1,182 +1,118 @@
-/* ======= TABLET AND MOBILE VIEW (max-width: 1024px) ======= */
-@media screen and (max-width: 1024px) {
-  section {
-    margin: 0 4rem;
-    height: auto;
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+  .about-containers {
+    flex-wrap: wrap;
   }
-
-  .education__pic-container,
-  .education-details-container {
-    width: 100%;
-    text-align: center;
+  #contact,
+  #projects {
+    height: fit-content;
   }
+}
 
-  .education-containers {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .skills-details-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .details-container {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .project-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .experience-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .experience-content {
-    text-align: left;
-  }
-
-  .hamburger-icon {
-    display: flex;
-  }
-
+@media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
-
   #hamburger-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
   }
-
-  .article-container {
-    justify-content: center;
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
   }
-
-  article {
-    width: 100%;
-    justify-content: center;
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
   }
 }
 
-/* ======= MOBILE VIEW (max-width: 600px) ======= */
 @media screen and (max-width: 600px) {
-  section {
-    margin: 0 1rem;
-    height: auto;
+  #contact,
+  footer {
+    height: 40vh;
   }
-
-  .section__pic-container {
-    width: 250px;
-    height: 250px;
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
   }
-
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .section_text_p2 {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .project-title {
-    font-size: 1.3rem;
-  }
-
-  .grad-year {
-    font-size: 0.9rem;
-  }
-
-  .icon {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-
-  .skills-sub-title {
-    font-size: 1.3rem;
-  }
-
-  .experience-content h3 {
+  article {
     font-size: 1rem;
   }
-
-  .experience-date,
-  .experience-points {
-    font-size: 0.85rem;
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
   }
-
-  .menu-links {
-    width: 100vw;
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
     text-align: center;
-    right: 0;
-    left: 0;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
   }
 }
+#experience {
+  margin-bottom: 20rem; /* Adjust this value (e.g., 5rem, 10rem) to push it down more */
+}
 
+#projects {
+  margin-bottom: 20rem; /* Adjust this value (e.g., 5rem, 10rem) to push it down more */
+}
 
+#skills {
+  margin-bottom: 15rem; /* Adjust this value (e.g., 5rem, 10rem) to push it down more */
+}
 
-
-
-/*Mobile fixing*/
-@media (max-width: 768px) {
-  .section__pic-container {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-  }
-
-  .round_pic {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  /* center-align the text section */
-  .section__text {
-    text-align: center;
-    padding: 1rem;
-  }
-
-  #profile {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    padding-top: 3rem;
-  }
-
-  .section_text {
-    padding: 0 1rem;
-  }
-
-  .btn-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn {
-    width: 80%;
-    max-width: 300px;
-  }
+#education {
+  margin-bottom: 20rem; /* Adjust this value (e.g., 5rem, 10rem) to push it down more */
 }
