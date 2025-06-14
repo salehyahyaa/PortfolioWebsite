@@ -138,22 +138,45 @@
 /*Mobile fixing*/
 @media (max-width: 768px) {
   .section__pic-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
   }
 
   .round_pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    object-fit: cover;
   }
 
-    /*center-align the text section */
+  /* center-align the text section */
   .section__text {
     text-align: center;
     padding: 1rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+
+  .section_text {
+    padding: 0 1rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 300px;
   }
 }
