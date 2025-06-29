@@ -143,15 +143,11 @@ a {
 
 .wave {
   display: inline-block;
-  font-size: 100px; /* make it nice & big */
+  font-size: 120px;
   cursor: pointer;
-  transform-origin: 70% 70%; /* pivot around bottom right to look like a hand wave */
-  height: 200px;
-  width: 400px;
+  transform-origin: 70% 70%;
   margin: auto 0;
   text-align: center;
-
-
 }
 
 /* Keyframes for rotating (like waving) */
@@ -269,7 +265,7 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 10rem;
   height: 80vh;
 }
 
