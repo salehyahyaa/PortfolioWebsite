@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Saleh Yahya" />
+    <title>My Portfolio</title>
+    
+    <!--Connecting to all FILES-->
+    <script src = "script.js"></script>
+    <link rel = "stylesheet" href="style.css" />
+    <link rel = "stylesheet" href="mediaqueries.css" />
+    <link rel = "html" href="about.html" />
+  </head>
+  <body>
+    <nav id = "desktop-nav">
+      <div class = "logo"><b>Saleh Yahya</b></div>
+      <div>
+        <ul class = "nav-links">
+          <li><a href = "#experience" class = "navbar-btn1">Experience</a></li>
+          <li><a href = "#projects" class = "navbar-btn2">Projects</a></li>
+          <li><a href = "#skills" class = "navbar-btn3">Skills</a></li>
+          <li><a href = "#education" class = "navbar-btn4">Education</a></li>
+        </ul>
+      </div>
+    </nav>
+<hr class="nav-line">
+
+    <nav id="hamburger-nav">
+      <div class = "logo">Saleh Yahya</div>
+      <div class = "hamburger-menu">
+        <div class = "hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class = "menu-links">
+          <li><a href = "#experience" class = "navbar-btn1" onclick="toggleMenu()">Experience</a></li>
+          <li><a href = "#projects" class = "navbar-btn2" onclick="toggleMenu()">Projects</a></li>
+          <li><a href = "#skills" class = "navbar-btn3" onclick="toggleMenu()">Skills</a></li>
+          <li><a href = "#education" class = "navbar-btn4" onclick="toggleMenu()">Education</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-------------------------------------------------------------------------------------HERO SECTION------------------------------------------------------------------->
+    <section id = "profile">
+      <span class="wave">👋</span>
+
+
+      <div class = "section_text">
+        <p class = "section_text_p1">Hello, I'm</p>
+        <h1 class = "title">Saleh Yahya</h1>
+        <p class = "section_text_p2">Software Engineer</p>
+        
+        <div class = "btn-container">
+          <button class = "btn btn-color-2" 
+            onclick = "window.open('./images/resume.pdf')"> 
+            Download CV
+          </button>
+          <button class="btn btn-color-1" 
+          onclick="location.href='about.html'">About Me
+        </button>
+        </div>
+
+        <div id = "socials-container">
+          <img 
+            src = "./images/email.png" 
+            alt="Email"
+            class= "icon" 
+            onclick= "location.href ='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCKCFTNfmhHTCKfgrnLWrxWWrsWVhZFqXWcmFGMsBSsBBgWfQpHFfBlXvFfJMNPtrKzdDKcL'"
+          />
+          <img 
+            src = "./images/linkedin.png" 
+            alt="Linkedin profile"
+            class = "icon" 
+            onclick = "location.href ='https://www.linkedin.com/in/salehyahya1/'"
+          />
+          <img 
+            src = "./images/github.png" 
+            alt = "Github profile"
+            class = "icon" 
+            onclick= "location.href ='https://github.com/salehyahyaa'"
+          />
+        </div>
+      </div>
+    </section>
+<!-------------------------------------------------------------------EXPERIENCE SECTION--------------------------------------------------------------------------------------------->
+
+<section id="experience">
+  <p class = "section_text_p1">Explore My</p>
+  <h1 class = "title">Experience</h1>
+
+  <div class = "experience-details-container">
+
+    <!-- Experience Card 1 -->
+<div class = "experience-card">
+  <img src = "./images/Logo.png" alt="logo" class="company-logo" />
+  <div class = "experience-content">
+    <h3>Software Engineer Intern @ <span class = "company-name">OveoAI</span></h3>
+    <p class = "experience-date">May 2025 – Aug 2025</p>
+    <ul class="experience-points">
+      <li>Shipped 4 full-stack features using XYZ description here</li>
+      <li>Improved backend API response time by 120ms XYZ description here</li>
+      <li>XYZ description here</li>
+    </ul>
+  </div>
+</div>
+
+    <!-- Experience Card 2 -->
+    <div class = "experience-card">
+      <img src = "./images/qubetics.jpg" alt="logo" class="company-logo" />
+      <div class="experience-content">
+        <h3>Software Development Intern @ <span class="company-name">Qubetics</span></h3>
+        <p class = "experience-date">February 2025 – May 2025</p>
+        <ul class = "experience-points">
+          <li>XYZ description here</li>
+          <li>XYZ description here</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-------------------------------------------------------------------PROJECT SECTION--------------------------------------------------------------------------------------------->
+
+<section id="projects">
+      <p class=  "section_text_p1">Browse My Recent</p>
+      <h1 class = "title">Projects</h1>
+      <div class = "experience-details-container">
+        <div class="education-containers">
+          
+          
+          <div class = "details-container color-container">
+            <div class = "article-container">
+              <img
+                src = "./images/loading.png"
+                alt = "Project 1"
+                class = "project-img"
+              />
+            </div>
+            <h2 class = "experience-sub-title project-title">Project One</h2>
+            <div class = "btn-container">
+              <button
+                class = "btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick = "location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          
+         
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src = "./images/loading.png"
+                alt = "Project 2"
+                class = "project-img"
+              />
+            </div>
+            <h2 class = "experience-sub-title project-title">Project Two</h2>
+            <div class = "btn-container">
+              <button
+                class = "btn btn-color-2 project-btn"
+                onclick = "location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class = "btn btn-color-2 project-btn"
+                onclick = "location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+         
+         
+          <div class = "details-container color-container">
+            <div class = "article-container">
+              <img
+                src = "./images/loading.png"
+                alt = Project 3"
+                class = "project-img"
+              />
+            </div>
+            <h2 class = "experience-sub-title project-title">Project Three</h2>
+            <div class = "btn-container">
+              <button
+                class = "btn btn-color-2 project-btn"
+                onclick = "location.href = 'https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class=  "btn btn-color-2 project-btn"
+                onclick = "location.href = 'https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+</section>
+<!---------------------------------------------------------------------------SKILLS SECTION--------------------------------------------------------------------------------->
+<section id = "skills">
+
+      <p class = "section_text_p1">Check Out My</p>
+      <h1 class = "title">Skills</h1>
+
+      <div class = "skills-details-container">
+        <div class = "education-containers">
+          <div class = "details-container">
+            <h2 class = "skills-sub-title">Frontend </h2>
+            <div class = "article-container">
+              
+              <article>  
+                <img
+                  src = "./images/html.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/css.jpg"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./images/react.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React.JS</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src="./images/js.png"
+                  alt="Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/typescript.png"
+                  alt = "Skills icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/php.jpg"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+         
+<!-------BACKEND SKILL CARD--------------->
+          <div class = "details-container">
+            <h2 class =" skills-sub-title">Backend</h2>
+            <div class = "article-container">
+          
+              <article>
+                <img
+                  src = "./images/python.png"
+                  alt = "Experience icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/java.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/c++.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/git.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+<!-------DB SKILL CARD--------------->
+          <div class = "details-container">
+            <h2 class = "skills-sub-title">Database</h2>
+            <div class = "article-container">
+          
+              <article>
+                <img
+                  src = "./images/postgresql.png"
+                  alt = "Experience icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/sql.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/mysql.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/mongodb.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+<!-------AI / ML SKILL CARD--------------->
+          <div class = "details-container">
+            <h2 class = "skills-sub-title">AI / Machine Learning</h2>
+            <div class = "article-container">
+          
+              <article>
+                <img
+                  src = "./images/pytorch.png"
+                  alt = "Experience icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>PyTorch</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/Scikit-learn.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Scikit-learn</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/tensorflow.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>TensorFlow</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/llm.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>LLM's</h3>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src = "./images/transformer.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Transformers</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+<!-------Tools / Frameworks SKILL CARD--------------->
+          <div class = "details-container">
+            <h2 class = "skills-sub-title">Tools / Frameworks</h2>
+            <div class ="article-container">
+          
+              <article>
+                <img
+                  src = "./images/pycharm.jpg"
+                  alt = "Experience icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>PyCharm</h3>
+                </div>
+              </article>
+             
+              <article>
+                <img
+                  src = "./images/restapi.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>REST API</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/fastapi.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>FastAPI</h3>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src = "./images/grpc.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>gRPC</h3>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src = "./images/docker.png"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src = "./images/githubActions.jpg"
+                  alt = "Skills icon"
+                  class = "icon"
+                />
+                <div>
+                  <h3>GitHub Actions</h3>
+                </div>
+              </article>
+            
+            </div>
+          </div>  
+        </div>
+      </div>
+
+</section>
+<!---------------------------------------------------------------------------------EDUCATION SECTION------------------------------------------------------------------>
+    <section id = "education">
+      <p class = "section_text_p1">See My</p>
+      <h1 class = "title">Education</h1>
+
+      <div class="section-container">
+
+        <!-- Use custom container so it doesn't inherit hero image style -->
+        <div class = "education__pic-container">
+          <img src = "./images/lewis-u.jpg" 
+            alt = "Lewis University Logo" 
+            class = "education-pic"
+          />
+        </div>
+
+        <div class = "education-details-container">
+          <div class = "education-containers">
+            <div class = "details-container">
+              <img
+                src = "./images/graudation.jpg"
+                alt = "Experience icon"
+                class = "icon glow-icon"
+              />
+              <h3>Graduate</h3>
+              <p class="grad-year">2027</p>
+              <p>M.S in Computer Science</p>    
+              </div>
+            <div class = "details-container">
+              <img
+                src = "./images/graudation.jpg"
+                alt = "Education icon"
+                class = "icon glow-icon"
+              />
+              <h3>Undergraduate</h3>
+              <p class="grad-year">2026</p>
+              <p>B.S in Computer Science<br/>B.S in Information Technology</p>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p><br>
+              I was accepteed into Lewis University in Romeoville, IL, 
+              where I double majored in Computer Science and Information Technology. 
+              I completed both bachelor’s degrees in just 3 years — 25% faster than the typical 4-year path.
+              After that, I earned my Master’s in Computer Science in only 1 year, 
+              finishing 50% faster than the standard 2-year timeline. In total, 
+              I completed 3 degrees in 4 years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
