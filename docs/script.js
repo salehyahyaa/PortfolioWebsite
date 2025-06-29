@@ -9,7 +9,6 @@ function toggleMenu() {
 
 window.onload = () => {
   const waveEmoji = document.querySelector(".wave");
-
   let waving = false;
 
   const startWaving = () => {
@@ -26,7 +25,17 @@ window.onload = () => {
   waveEmoji.addEventListener("mouseenter", startWaving);
   waveEmoji.addEventListener("mouseleave", stopWaving);
 
-  // Mobile tap toggle
+  // Mobile touch
+  waveEmoji.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // stops scrolling
+    if (waving) {
+      stopWaving();
+    } else {
+      startWaving();
+    }
+  }, { passive: false });
+
+  // Also allow tap/click on all devices
   waveEmoji.addEventListener("click", () => {
     if (waving) {
       stopWaving();
