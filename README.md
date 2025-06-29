@@ -4,11 +4,13 @@ This web application showcases my experience, projects, skills, and education as
 
 I went for a simple, clean design to inspire fellow developers to create their portfolios using mine as a foundation.
 
+
 # Requirements
 
 - HTML
 - CSS
 - JavaScript
+
 
 ## Setup
 
