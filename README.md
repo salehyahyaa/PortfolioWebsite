@@ -1,6 +1,5 @@
 # Saleh Yahya - Portfolio Web Application
 
-Welcome to my personal portfolio!  
 This web application showcases my experience, projects, skills, and education as I pursue a career in software engineering.
 
 I went for a simple, clean design to inspire fellow developers to create their portfolios using mine as a foundation.
