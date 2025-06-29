@@ -5,42 +5,22 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-/* -------------------------------------------------- WAVE EMOJI -------------------------------------------------- */
-
+/* WAVE EMOJI - FORCE ANIMATION ON ANY TAP */
 window.onload = () => {
   const waveEmoji = document.querySelector(".wave");
-  let waving = false;
 
-  const startWaving = () => {
-    waveEmoji.style.animation = "waveAnimation 1.5s ease-in-out infinite";
-    waving = true;
-  };
-
-  const stopWaving = () => {
+const startWaving = () => {
+  waveEmoji.style.animation = "waveAnimation 1.5s ease-in-out infinite";
+  setTimeout(() => {
     waveEmoji.style.animation = "none";
-    waving = false;
-  };
-
-  // Desktop hover
-  waveEmoji.addEventListener("mouseenter", startWaving);
-  waveEmoji.addEventListener("mouseleave", stopWaving);
-
-  // Mobile touch
-  waveEmoji.addEventListener("touchstart", (e) => {
-    e.preventDefault(); // stops scrolling
-    if (waving) {
-      stopWaving();
-    } else {
-      startWaving();
-    }
-  }, { passive: false });
-
-  // Also allow tap/click on all devices
-  waveEmoji.addEventListener("click", () => {
-    if (waving) {
-      stopWaving();
-    } else {
-      startWaving();
-    }
-  });
+  }, 3000); // waves for 3 sec
 };
+
+  // Always start on click or touch
+  waveEmoji.addEventListener("click", startWaving);
+  waveEmoji.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    startWaving();
+  }, { passive: false });
+};
+
