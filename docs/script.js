@@ -10,19 +10,28 @@ function toggleMenu() {
 window.onload = () => {
   const waveEmoji = document.querySelector(".wave");
 
-  // Desktop hover
-  waveEmoji.addEventListener("mouseenter", () => {
-    waveEmoji.style.animation = "waveAnimation 1.5s ease-in-out infinite";
-  });
-  waveEmoji.addEventListener("mouseleave", () => {
-    waveEmoji.style.animation = "none";
-  });
+  let waving = false;
 
-  // Mobile touch
-  waveEmoji.addEventListener("touchstart", () => {
+  const startWaving = () => {
     waveEmoji.style.animation = "waveAnimation 1.5s ease-in-out infinite";
-  });
-  waveEmoji.addEventListener("touchend", () => {
+    waving = true;
+  };
+
+  const stopWaving = () => {
     waveEmoji.style.animation = "none";
+    waving = false;
+  };
+
+  // Desktop hover
+  waveEmoji.addEventListener("mouseenter", startWaving);
+  waveEmoji.addEventListener("mouseleave", stopWaving);
+
+  // Mobile tap toggle
+  waveEmoji.addEventListener("click", () => {
+    if (waving) {
+      stopWaving();
+    } else {
+      startWaving();
+    }
   });
 };
