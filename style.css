@@ -36,16 +36,92 @@ nav, .nav-links {
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 17vh;
+  padding: 0 4rem; /* decides the distance between screens in the navbar */
+
+
+
 }
 
-.nav-links {
-  gap: 2rem;
-  list-style: none; /*removed the bullet points*/
-  font-size: 1.5rem;
+.nav-line {
+  height: 2px;
+  background: linear-gradient(135deg, #8A2BE2 0%, #00BFFF 100%);
+  border: none;
+  margin: -10px 0 0 0; /* pulls it up close to navbar */
+
 }
+
+.navbar-btn1, .navbar-btn2, .navbar-btn3, .navbar-btn4 {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid black;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.navbar-btn1 {
+background: linear-gradient(90deg, #0a6dd6 0%, #020aff 100%);
+}
+.navbar-btn2 {
+background: linear-gradient(90deg, #0a6dd6 0%, #020aff 100%);
+}
+.navbar-btn3 {
+background: linear-gradient(90deg, #0a6dd6 0%, #020aff 100%);
+}
+.navbar-btn4 {
+background: linear-gradient(90deg, #0a6dd6 0%, #020aff 100%);
+}
+
+
+/* Optional individual hover colors */
+.navbar-btn1:hover {
+background: linear-gradient(90deg, #0A66C2 0%, #8113d5 100%);
+  color: white;
+  transform: scale(1.08); /* makes it pop */
+
+}
+
+.navbar-btn2:hover {
+background: linear-gradient(90deg, #8113d5 0%, #0A66C2 100%);
+  color: white;
+  transform: scale(1.08); /* makes it pop */
+}
+
+.navbar-btn3:hover {
+background: linear-gradient(90deg, #0A66C2 0%, #8113d5 100%);
+  color: white;
+  transform: scale(1.08); /* makes it pop */
+}
+
+.navbar-btn4:hover {
+background: linear-gradient(90deg, #8113d5 0%, #0A66C2 100%);
+  color: white;
+  transform: scale(1.08); /* makes it pop */
+
+}
+
+/* Nav structure cleanup */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+
+
 
 a {
   color: black;
@@ -53,12 +129,6 @@ a {
   text-decoration-color: white;
 }
 
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
-}
 
 .logo {
   font-size: 2rem;
@@ -67,6 +137,35 @@ a:hover {
 .logo:hover {
   cursor: default /*when hovering over logo the cursor is default*/
 }
+
+
+/*FOR THE HAND WAVE*/
+
+.wave {
+  display: inline-block;
+  font-size: 100px; /* make it nice & big */
+  cursor: pointer;
+  transform-origin: 70% 70%; /* pivot around bottom right to look like a hand wave */
+  height: 200px;
+  width: 400px;
+  margin: auto 0;
+  text-align: center;
+
+
+}
+
+/* Keyframes for rotating (like waving) */
+@keyframes waveAnimation {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(14deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
 
 
 /* HAMBURGER MENU */
@@ -112,7 +211,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -296,186 +395,8 @@ section {
   gap: 1rem;
 }
 
-/* Make .btn-color-2 white with black text */
-.btn-color-2 {
-  background-color: white;
-  color: black;
-}
 
 
-
-/*------------------------------------------------------------- EDUCATION SECTION ----------------------------------------------------------------------------------------*/
-
-#education {
-  position: relative;
-}
-#education .text-container p {
-  color: black; /* this targets the color of the education description */
-}
-
-.education-containers {
-  display: flex;
-  flex-direction: row;  /* This lays the cards side-by-side */
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.education-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.education-containers, 
-.education-details-container {
-  display: flex;
-}
-
-.education-pic {
-  border-radius: 2rem;
-}
-
-.details-container { /*effecting the degree feaure cards*/
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
-.section-container {  /*effecting the degree feaure cards*/
-  gap: 4rem;
-  height: 80%;
-}
-
-.section__pic-container {  /*effecting the degree feaure cards*/
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-.education__pic-container { /*fixed logo*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.education-pic { /*fixed logo*/
-  max-width: 300px;
-  height: auto;
-  border-radius: 1rem;
-  object-fit: contain;
-}
-
-.details-container:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.grad-year {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 0.2rem 0 0.5rem;
-  background: linear-gradient(90deg, #861F41, #E2B4C0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-/*------------------------------------------------------------- SKILLS SECTION ----------------------------------------------------------------------------------------*/
-.skills-details-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.details-container {
-  flex: 1;
-  background: white;
-  padding: 2rem;
-  border: 1px solid rgb(163, 163, 163);
-  border-radius: 2rem;
-  text-align: left;
-  min-width: 280px;
-  max-width: 400px;
-}
-
-.skills-sub-title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.article-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-article {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 45%; /* two items per row */
-}
-
-article .icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  object-fit: contain;
-}
-
-
-/*TARGETING THE ARROW ICON*/
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-  cursor: pointer;
-}
-
-#skills {
-  position: relative;
-}
-
-.arrow-bottom {
-  position: absolute;
-  bottom: 2.5rem;
-  right: -5rem;
-  cursor: pointer;
-}
-/*------------------------------------------------------------- PROJECTS SECTION ----------------------------------------------------------------------------------------*/
-
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
 /*-------------------------------------------------------EXPERIANCE SECTION-------------------------------------------------------*/
 /* Container holding all experience cards */
 .experience-details-container {
@@ -616,4 +537,181 @@ article .icon {
   color: #111;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   text-decoration: none;
+}
+
+
+/*------------------------------------------------------------- PROJECTS SECTION ----------------------------------------------------------------------------------------*/
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/*------------------------------------------------------------- SKILLS SECTION ----------------------------------------------------------------------------------------*/
+
+.skills-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.details-container {
+  flex: 1;
+  background: white;
+  padding: 2rem;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 2rem;
+  text-align: left;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.skills-sub-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 45%; /* two items per row */
+}
+
+article .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+}
+
+
+/*TARGETING THE ARROW ICON*/
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  cursor: pointer;
+}
+
+#skills {
+  position: relative;
+}
+
+.arrow-bottom {
+  position: absolute;
+  bottom: 2.5rem;
+  right: -5rem;
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------- EDUCATION SECTION ----------------------------------------------------------------------------------------*/
+
+#education {
+  position: relative;
+}
+#education .text-container p {
+  color: black; /* this targets the color of the education description */
+}
+
+.education-containers {
+  display: flex;
+  flex-direction: row;  /* This lays the cards side-by-side */
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.education-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.education-containers, 
+.education-details-container {
+  display: flex;
+}
+
+.education-pic {
+  border-radius: 2rem;
+}
+
+.details-container { /*effecting the degree feaure cards*/
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {  /*effecting the degree feaure cards*/
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {  /*effecting the degree feaure cards*/
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.education__pic-container { /*fixed logo*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-pic { /*fixed logo*/
+  max-width: 300px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+.details-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.grad-year {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.2rem 0 0.5rem;
+  background: linear-gradient(90deg, #861F41, #E2B4C0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
