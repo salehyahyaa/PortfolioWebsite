@@ -532,6 +532,10 @@ section {
   color: var(--text-primary);
 }
 
+[data-theme="dark"] .btn-color-2 {
+  border: 2px solid var(--text-primary);
+}
+
 .btn-color-1:hover, .btn-color-2:hover {
   cursor: pointer;
 }
@@ -1108,6 +1112,10 @@ section {
   font-weight: bold;
   display: inline-block;
   padding-right: 2px;
+}
+
+[data-theme="dark"] .year-navy {
+  color: #5B9BD5; /* Lighter blue for dark mode visibility */
 }
 
 .year-hyphen {

@@ -255,6 +255,20 @@ window.toggleMenu = function(e) {
   return false;
 };
 
+// Handle menu link clicks - navigate and close menu
+window.handleMenuLink = function(e) {
+  // Close the menu first
+  const overlay = document.querySelector('.menu-overlay');
+  const icon = document.querySelector('.hamburger-icon');
+  
+  if (overlay) overlay.classList.remove('open');
+  if (icon) icon.classList.remove('open');
+  document.body.style.overflow = '';
+  
+  // Allow default navigation to happen
+  // The href will handle the navigation
+};
+
 // Initialize theme on page load
 function initializeTheme() {
   const savedTheme = localStorage.getItem('theme') || 'light';
@@ -313,7 +327,8 @@ function setupMenuButton() {
   const menuLinks = document.querySelectorAll('.menu-links a');
   menuLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      window.toggleMenu(e);
+      // Close menu but allow navigation
+      window.handleMenuLink(e);
     });
   });
 }

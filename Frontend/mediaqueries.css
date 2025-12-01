@@ -96,6 +96,58 @@
   section {
     margin: 0 5%;
   }
+  
+  /* Section titles for tablet */
+  #about .title {
+    font-size: 3rem;
+  }
+  
+  #experience .title,
+  #education .title {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet breakpoint */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  #about .title,
+  #experience .title,
+  #education .title {
+    font-size: 2.5rem;
+  }
+  
+  .section__pic-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .experience-card {
+    width: 95%;
+    padding: 1.25rem 1.5rem;
+    gap: 1.25rem;
+  }
+  
+  .details-container {
+    max-width: 450px;
+    padding: 1.25rem;
+  }
+  
+  section {
+    margin: 0 3%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  #about,
+  #experience,
+  #education {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -144,12 +196,16 @@
     font-size: 1.5rem;
   }
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   #about {
     padding: 3rem 1rem;
     min-height: auto;
+  }
+  
+  #about .title {
+    font-size: 2rem;
   }
   
   .about-container {
@@ -166,8 +222,17 @@
     margin: 0 auto;
   }
   
+  #experience {
+    padding: 3rem 1rem;
+  }
+  
+  #experience .title {
+    font-size: 2rem;
+  }
+  
   .experience-container {
     gap: 2rem;
+    padding-top: 2rem;
   }
   
   .experience-line {
@@ -175,8 +240,54 @@
     margin: 0 auto;
   }
   
+  .experience-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .experience-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .experience-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-date,
+  .experience-location {
+    font-size: 0.8rem;
+  }
+  
+  .experience-points {
+    font-size: 0.85rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+  
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+  
+  #education {
+    padding: 3rem 1rem;
+  }
+  
+  #education .title {
+    font-size: 2rem;
+  }
+  
   .education-container {
     gap: 2rem;
+    padding-top: 2rem;
   }
   
   .education-line {
@@ -184,30 +295,88 @@
     margin: 0 auto;
   }
   
-  #about .about-description {
-    font-size: 1rem;
-    text-align: center;
+  .details-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.25rem 1rem;
   }
+  
+  .education-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .university-name {
+    font-size: 0.75rem;
+  }
+  
+  #about .about-description {
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+  
   .text-container {
     text-align: left;
   }
+  
   .menu-links a {
-    font-size: 1.8rem;
-    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    padding: 1.25rem 1.5rem;
   }
   
   .footer-container {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    padding: 2rem 1rem;
   }
   
   .footer-copyright,
   .footer-credit {
     text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  section {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .section_text_p1 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
   }
 }
 
 #education {
   margin-bottom: 0;
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  #about .title,
+  #experience .title,
+  #education .title {
+    font-size: 1.75rem;
+  }
+  
+  .section__pic-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .menu-links a {
+    font-size: 1.4rem;
+    padding: 1rem 1.25rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
 }
