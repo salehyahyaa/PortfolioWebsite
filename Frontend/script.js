@@ -190,8 +190,6 @@ class PortfolioApp {
 // Global functions for backward compatibility with inline onclick handlers
 // These need to be available immediately, before DOMContentLoaded
 window.toggleTheme = function(e) {
-  console.log('toggleTheme called', e);
-  
   if (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -202,25 +200,18 @@ window.toggleTheme = function(e) {
   const currentTheme = html.getAttribute('data-theme') || 'light';
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   
-  console.log('Current theme:', currentTheme, 'New theme:', newTheme);
-  
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
   
   const themeIcon = document.querySelector('.theme-icon');
   if (themeIcon) {
     themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-    console.log('Theme icon updated');
-  } else {
-    console.error('Theme icon not found');
   }
   
   return false;
 };
 
 window.toggleMenu = function(e) {
-  console.log('toggleMenu called', e);
-  
   if (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -230,26 +221,20 @@ window.toggleMenu = function(e) {
   const overlay = document.querySelector('.menu-overlay');
   const icon = document.querySelector('.hamburger-icon');
   
-  console.log('Overlay:', overlay, 'Icon:', icon);
-  
   if (!overlay || !icon) {
-    console.error('Menu elements not found');
     return false;
   }
   
   const isOpen = overlay.classList.contains('open');
-  console.log('Menu is currently:', isOpen ? 'open' : 'closed');
   
   if (isOpen) {
     overlay.classList.remove('open');
     icon.classList.remove('open');
     document.body.style.overflow = '';
-    console.log('Menu closed');
   } else {
     overlay.classList.add('open');
     icon.classList.add('open');
     document.body.style.overflow = 'hidden';
-    console.log('Menu opened');
   }
   
   return false;

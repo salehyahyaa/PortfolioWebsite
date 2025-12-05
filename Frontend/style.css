@@ -765,13 +765,6 @@ section {
   vertical-align: baseline;
 }
 
-.experience-location {
-  font-size: 0.85rem;
-  color: var(--text-quinary);
-  margin-bottom: 0.8rem;
-  font-style: italic;
-}
-
 .experience-points {
   list-style-type: disc;
   padding-left: 1.2rem;
